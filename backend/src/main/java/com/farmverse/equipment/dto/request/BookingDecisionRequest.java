@@ -1,0 +1,18 @@
+package com.farmverse.equipment.dto.request;
+
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BookingDecisionRequest {
+
+    @Size(max = 500, message = "Remarks cannot exceed 500 characters")
+    private String remarks;
+}
+
